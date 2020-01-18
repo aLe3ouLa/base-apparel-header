@@ -7,17 +7,24 @@
 }
 
 :root {
+  --text-size-default: 1.6rem;
+  --text-size-title: 2rem;
 
-    --text-size-default: 1.6rem;
-    --text-size-title: 2rem;
+  --color-primary: hsl(0, 36%, 70%);
+  --color-secondary: hsl(0, 93%, 68%);
+  --color-accent: hsl(0, 6%, 24%);
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
 
-    --color-primary: hsl(0, 36%, 70%);
-    --color-secondary: hsl(0, 93%, 68%);
-    --color-accent: hsl(0, 6%, 24%);
-    --gradient-primary: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-    --gradient-secondary: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-
-    --text-family: 'Josefin Sans', sans-serif;
+  --text-family: "Josefin Sans", sans-serif;
 }
 
 html {
@@ -56,8 +63,8 @@ body {
 }
 
 ::selection {
-    background-color: hsl(0, 93%, 68%);
-    color: #fff; 
+  background-color: hsl(0, 93%, 68%);
+  color: #fff;
 }
 
 .hero {
@@ -75,11 +82,11 @@ body {
 }
 
 .hero-info {
-    width: 60%;
-    height: 100%;
+  width: 60%;
+  height: 100%;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-position: center;
-    background-size: cover;
+  background-size: cover;
   padding: 4rem 10rem;
 }
 
@@ -109,41 +116,70 @@ body {
 }
 
 .hero-img {
-    width: 40%;
-    height: 100%;
+  width: 40%;
+  height: 100%;
 }
 
 .hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 form {
-  display: flex;
   margin: 3rem 0;
+  display: flex;
   position: relative;
 }
 
 .text-container__input {
-  padding: 1.4rem;
+  padding: 1.2rem 1.4rem;
   width: 100%;
   border-radius: 200px;
-  border: 1px solid hsl(0, 36%, 70%);
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
   outline: none;
+  flex: 1;
 }
 
-input:focus:required:invalid {
-  border: 1px solid #fe5151;
+.error-message {
+  font-size: 0.9rem;
+  display: none;
+  margin-top: 0.9rem;
+  color: var(--color-primary);
+  position: absolute;
+  bottom: -15px;
+  left: 1.6rem;
 }
-input:required:valid {
-  background-color: white;
-  color: black;
+
+.error-icon
+{   color: white;
+    background-color: var(--color-secondary);
+    background-image: url(../images/icon-error.svg);
+    background-position: center;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    margin: 0 0.5vmin;
+    display: none;
+    position: absolute;
+    top: 25%;
+    right: 20%;
+}
+
+.text-container__input:focus:invalid {
+  border: 3px solid var(--color-secondary);
+}
+.text-container__input:focus:invalid ~ .error-message,
+.text-container__input:focus:invalid ~ .error-icon {
+  display: block;
 }
 
 ::placeholder {
-  color: hsl(0, 6%, 24%);
+  color: var(--color-primary);
+  font-weight: 300;
 }
 
 .btn {
@@ -164,7 +200,12 @@ input:required:valid {
 }
 
 .btn:hover {
-  /* background-size: 100%; */
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(0.9);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 .attribution {

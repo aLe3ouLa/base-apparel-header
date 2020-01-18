@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/media.css">
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
 
-</head>
-<body>
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-info">
+        <div class="hero-info__img-container">
+          <img src="./images/logo.svg" alt="" class="text-container__logo" />
+        </div>
 
-  <header class="hero">
-    <div class="hero-info">
-      <div class="cont-img">
-        <img src="./images/logo.svg" alt="" class="text-container__logo">
+        <h1 class="text-container__heading"><span>We're</span> coming soon</h1>
+
+        <p class="text-container__paragraph">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+
+        <form>
+          <input
+              class="text-container__input"
+              type="email"
+              placeholder="Email Address"
+              aria-label="Email"
+            />
+            <button class="btn btn-submit" type="submit">
+              <svg
+                class="arrow-right"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="20"
+              >
+                <path
+                  fill="none"
+                  stroke="#FFF"
+                  stroke-width="2"
+                  d="M1 1l8.836 8.836L1 18.671"
+                />
+              </svg>
+            </button>
+          <span class="error-icon"></span>
+          <p class="error-message">Please provide a valid e-mail</p>
+        </form>
       </div>
-      
-      <h1 class="text-container__heading">
-        <span>We're</span> coming soon
-      </h1>
-
-      <p class="text-container__paragraph">Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-
-      <form>
-        <input class="text-container__input" type="email" placeholder="Email Address" required>
-        <button class="btn btn-submit" type="submit">
-          <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="12" height="20"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671"/></svg>
-        </button>
-      </form>
-    </div>
-    <div class="hero-img">
-      <img
+      <div class="hero-img">
+        <img
           srcset="images/hero-desktop.jpg 610w, images/hero-mobile.jpg 375w"
           sizes="(max-width: 1200px) 800px,
                   (max-width: 600px) 480px,
@@ -43,15 +70,16 @@
           src="images/hero-desktop.jpg"
           alt="Model Apparel"
         />
-    </div>
-  </header>
+      </div>
+    </header>
 
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="ale3oula.github.io">Alexandra Barka</a>.
-    </p>
-  </footer>
-</body>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="ale3oula.github.io">Alexandra Barka</a>.
+      </p>
+    </footer>
+  </body>
 </html>
