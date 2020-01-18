@@ -7,6 +7,8 @@
 }
 
 :root {
+  --text-size--responsive: 62.5%; /* 1rem = 16px */
+
   --text-size-default: 1.6rem;
   --text-size-title: 2rem;
 
@@ -29,13 +31,12 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: var(--text-size--responsive);
 }
 
 body {
   font-family: var(--text-family);
   font-size: var(--text-size-default);
-  padding: 8rem;
   background-image: var(--gradient-primary);
 
   display: flex;
@@ -44,6 +45,7 @@ body {
   justify-content: center;
 
   height: 100vh;
+  padding: 8rem;
 }
 
 ::selection {
@@ -137,20 +139,20 @@ form {
   left: 1.6rem;
 }
 
-.error-icon
-{   color: white;
-    background-color: var(--color-secondary);
-    background-image: url(../images/icon-error.svg);
-    background-position: center;
-    border-radius: 100%;
-    width: 2rem;
-    height: 2rem;
-    text-align: center;
-    margin: 0 0.5vmin;
-    display: none;
-    position: absolute;
-    top: 25%;
-    right: 20%;
+.error-icon {
+  color: white;
+  background-color: var(--color-secondary);
+  background-image: url(../images/icon-error.svg);
+  background-position: center;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  margin: 0 0.5vmin;
+  display: none;
+  position: absolute;
+  top: 25%;
+  right: 20%;
 }
 
 .text-container__input:focus:invalid {
