@@ -1,0 +1,32 @@
+@media (max-width: 720px) {
+
+    body {
+        padding: 0;
+    }
+    .heading {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .img-container {
+        order: -1;
+    }
+
+    .text-container {
+        padding: 0;
+    }
+
+    .cont-img {
+        display: block;
+        width: 100%;
+        padding: 2rem;
+        background-color: #fefefe;
+
+        position: absolute;
+        top: 0;
+    }
+
+    .text-container__logo {
+       
+    }
+}

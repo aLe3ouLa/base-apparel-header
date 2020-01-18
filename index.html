@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
@@ -15,7 +16,10 @@
 
   <header class="heading">
     <div class="text-container">
-      <img src="./images/logo.svg" alt="" class="text-container__logo">
+      <div class="cont-img">
+        <img src="./images/logo.svg" alt="" class="text-container__logo">
+      </div>
+      
       <h1 class="text-container__heading">
         <span>We're</span> coming soon
       </h1>
@@ -24,8 +28,10 @@
         Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
       <form>
-        <input class="text-container__input" type="email" placeholder="Email Address">
-        <button class="btn btn-submit" type="submit"><img src="./images/icon-arrow.svg" alt=""></button>
+        <input class="text-container__input" type="email" placeholder="Email Address" required>
+        <button class="btn btn-submit" type="submit">
+          <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="12" height="20"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l8.836 8.836L1 18.671"/></svg>
+        </button>
       </form>
     </div>
     <div class="img-container">
