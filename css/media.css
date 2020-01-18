@@ -1,4 +1,13 @@
-@media (max-width: 900px) {
+@media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%;
+    }
+  }
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+      }
   body {
     padding: 0;
     height: 100%;
@@ -13,6 +22,7 @@
   .hero-info {
     padding: 5rem;
     margin-top: 60%;
+    width: 100%;
   }
 
   .hero-img {
@@ -38,23 +48,13 @@
   }
 }
 
-@media (max-width: 768px) {
-  .hero-info {
-    width: 90%;
-    padding: 4rem;
-    margin-top: 34rem;
-  }
-}
-
-@media (max-width: 320px) {
+@media only screen and (max-width: 30em) {
   .hero-info {
     padding: 2rem;
-    width: 90%;
     margin-top: 95%;
   }
 
   .text-container__heading {
-    font-size: 5rem;
     margin: 0;
   }
 
